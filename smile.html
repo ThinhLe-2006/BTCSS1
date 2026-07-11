@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Bài tập 1 - Vẽ mặt cười</title>
+
+<style>
+body{
+    font-family: Arial;
+}
+
+canvas{
+    border:2px solid black;
+    display:block;
+    margin:auto;
+}
+h1{
+    color:#1f5fae;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>Bài tập 1</h1>
+<h3>Vẽ hình mặt cười:</h3>
+
+<canvas id="myCanvas" width="900" height="700"></canvas>
+
+<script>
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+
+// Mặt
+ctx.beginPath();
+ctx.arc(450,350,180,0,2*Math.PI);
+ctx.fillStyle="#FFFACD";
+ctx.fill();
+ctx.stroke();
+
+// Mắt trái
+ctx.beginPath();
+ctx.arc(360,290,20,0,2*Math.PI);
+ctx.stroke();
+
+// Mắt phải
+ctx.beginPath();
+ctx.arc(540,290,20,0,2*Math.PI);
+ctx.stroke();
+
+// Mũi
+ctx.beginPath();
+ctx.moveTo(450,350);
+ctx.lineTo(450,420);
+ctx.stroke();
+
+// Miệng
+ctx.beginPath();
+ctx.arc(450,390,70,0,Math.PI,false);
+ctx.stroke();
+
+</script>
+
+</body>
+</html>
