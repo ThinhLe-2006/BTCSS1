@@ -2,33 +2,65 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<title>LAB Form</title>
+<title>Đăng ký thành viên CLB Yêu Nhạc</title>
 
 <style>
-body{
-    font-family: Arial, sans-serif;
-}
 
-.mytextbox{
-    color:#99FF33;
-    background-color:#006699;
-    border:1px solid #996633;
-    width:300px;
-    padding:5px;
+body{
+    font-family: Times New Roman;
+    background:white;
 }
 
 #form1 table{
+    width:500px;
+    margin:20px auto;
+    border-collapse:collapse;
     border:5px groove #993366;
     background:#FFCCCC;
     color:#003399;
-    margin:0 auto;
-    border-collapse:collapse;
 }
 
-#form1 table td{
+#form1 caption{
+    font-size:24px;
+    color:#0033CC;
+    font-weight:bold;
+    padding:10px;
+}
+
+#form1 td{
     border:1px solid #CC9999;
     padding:6px;
 }
+
+#form1 td:first-child{
+    width:150px;
+    font-weight:bold;
+}
+
+.mytextbox{
+    width:270px;
+    background:#006699;
+    color:#99FF33;
+    border:1px solid #996633;
+    padding:3px;
+}
+
+textarea.mytextbox{
+    height:90px;
+}
+
+select.mytextbox{
+    width:275px;
+}
+
+.button{
+    padding:2px 10px;
+}
+
+.center{
+    text-align:center;
+}
+
 </style>
 
 </head>
@@ -37,58 +69,44 @@ body{
 
 <form id="form1">
 
-<table width="500" cellpadding="4" cellspacing="0">
+<table>
 
-<caption><b>ĐĂNG KÝ THÀNH VIÊN CLB YÊU NHẠC</b></caption>
+<caption>ĐĂNG KÝ THÀNH VIÊN CLB YÊU NHẠC</caption>
 
 <tr>
 <td>Họ tên</td>
-<td>
-<input type="text" id="txtHoTen" class="mytextbox"
-placeholder="Nhập họ tên" required>
-</td>
+<td><input class="mytextbox" type="text" value="Nguyễn Văn Tèo"></td>
 </tr>
 
 <tr>
 <td>Tên đăng nhập</td>
-<td>
-<input type="text" id="txtUserName" class="mytextbox"
-placeholder="Username" required>
-</td>
+<td><input class="mytextbox" type="text" value="teonv"></td>
 </tr>
 
 <tr>
 <td>Mật khẩu</td>
-<td>
-<input type="password" id="txtPass" class="mytextbox"
-required>
-</td>
+<td><input class="mytextbox" type="password" value="123456"></td>
 </tr>
 
 <tr>
 <td>Gõ lại mật khẩu</td>
-<td>
-<input type="password" id="txtRepass"
-class="mytextbox" required>
-</td>
+<td><input class="mytextbox" type="password" value="123456"></td>
 </tr>
 
 <tr>
 <td>Phái</td>
 <td>
-<input type="radio" name="rdPhai" value="0"> Nam
-<input type="radio" name="rdPhai" value="1"> Nữ
+<input type="radio" checked> Nam
+<input type="radio"> Nữ
 </td>
 </tr>
 
 <tr>
 <td>Ngoại ngữ</td>
 <td>
-<input type="checkbox" id="chkAnh"> Anh
-
-<input type="checkbox" id="chkPhap"> Pháp
-
-<input type="checkbox" id="chkHoa"> Hoa
+<input type="checkbox" checked> Anh
+<input type="checkbox"> Pháp
+<input type="checkbox"> Hoa
 </td>
 </tr>
 
@@ -96,16 +114,10 @@ class="mytextbox" required>
 <td>Nghề nghiệp</td>
 <td>
 
-<select id="cboNgheNghiep" class="mytextbox">
-
-<option value="0">Bạn làm nghề gì</option>
-
-<option value="1">Học sinh - Sinh viên</option>
-
-<option value="2">Giáo viên</option>
-
-<option value="3">Nhân viên</option>
-
+<select class="mytextbox">
+<option selected>Học sinh-Sinh viên</option>
+<option>Giáo viên</option>
+<option>Nhân viên</option>
 </select>
 
 </td>
@@ -114,36 +126,31 @@ class="mytextbox" required>
 <tr>
 <td>Hình</td>
 <td>
-<input type="file" id="fHinh"
-class="mytextbox">
+<input class="mytextbox" value="missonha.jpg">
+<input type="file">
 </td>
 </tr>
 
 <tr>
 <td>Sở thích</td>
 <td>
-<textarea id="txtSoThich"
-class="mytextbox"
-rows="4"></textarea>
+
+<textarea class="mytextbox">Ngắm trăng, uống trà, vuốt râu
+nhìn mưa rơi, nghe chim hót, ngâm thơ</textarea>
+
 </td>
 </tr>
 
 <tr>
-<td colspan="2" align="center">
 
-<input type="submit"
-id="btnDangKy"
-value="Đăng ký">
+<td colspan="2" class="center">
 
-<input type="reset"
-id="btnXoa"
-value="Làm lại">
+<input class="button" type="submit" value="Đăng ký">
 
-<input type="hidden"
-name="NgayDangKy"
-value="11/11/2011">
+<input class="button" type="reset" value="Làm lại">
 
 </td>
+
 </tr>
 
 </table>
